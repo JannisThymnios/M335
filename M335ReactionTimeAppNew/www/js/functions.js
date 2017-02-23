@@ -8,8 +8,8 @@ var GameMode = ""; //Spielmodus (Classic oder Music)
 var Difficulty = ""; //Schwierigkeit (1:Eifach,2:Moderat,3:Schwierig)
 var User = ""; //Die ID des Users
 var StartTimer = 0; //StartTimer wird aufgrund der Difficulty gesetzt
+var currentMaxTiming = 0;
 //------------------------------------------------------------
-
 
 
 //Versteckt einen Abschnitt, aufgrund der ID!
@@ -37,8 +37,7 @@ function StagePassed(aktuellePunktezahl) {
 //------------------------------------------------------------------------------------
 //Verringert das MaxTiming um 10ms
 function NewMaxTiming(aktuellesMaxTiming) {
-    var MaxTiming = aktuellesMaxTiming - TimingIntervall;
-    return MaxTiming;
+    currentMaxTiming = aktuellesMaxTiming - TimingIntervall;
 };
 //------------------------------------------------------------------------------------
 //Setzt den GameMode aufgrund der HTML Selektion
@@ -99,5 +98,20 @@ function ResetValues() {
     Difficulty = "";
     User = "";
     StartTimer = 0;
+    currentMaxTiming = 0;
+};
+function GoToScoreboard() {
+
+};
+//------------------------------------------------------------------------------------
+//HAUPTFUNKTION DES SPIELS , HIER WIRD DER NÄCHSTE LAUF ENTSCHIEDEN UND BERECHNET
+function CheckStage(Value) {
+    if((currentMaxTiming - Value) >= 0 ) {
+        StagePassed();
+        NewMaxTiming();
+        GoToGame();
+    } else {
+        GoToScoreboard();
+    }
 };
 //------------------------------------------------------------------------------------
