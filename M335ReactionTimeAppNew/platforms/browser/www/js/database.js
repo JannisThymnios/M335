@@ -1,12 +1,9 @@
-var name = document.getElementById("nameUser");
-var Button = document.getElementById("Bestaetigen");
-
 
 function Beclick(){
 
     
     var userData = {
-        name: name,
+        name: document.getElementById("nameUser").value,
         foto: "-"
     };
 
