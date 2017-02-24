@@ -85,6 +85,9 @@ li
     display: table;
     width: 100%;
 }
+#menue, #difficulty, #tableScore {
+    display: none;
+}
 #scorerboard
 {
     position: relative;

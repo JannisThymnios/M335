@@ -5,7 +5,7 @@ function GoToLogin() {
 };
 //------------------------------------------------------------------------------------
 //Zeigt Hauptmenü
-function GoToMainMenue(UserName) {
+function GoToMainMenue() {
     HideAllContainer();
     UnHideByID("menue");
 };
@@ -25,7 +25,7 @@ function GoToMusicGameMode() {
 //Zeigt Scoreboard
 function GoToScoreboard() {
     HideAllContainer();
-    UnHideByID("musicmode");
+    UnHideByID("tableScore");
 };
 //------------------------------------------------------------------------------------
 //Zeigt Hilfe

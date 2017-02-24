@@ -1,9 +1,9 @@
 
 var newUserKey;
 function Login(){
-    var Username;
+    var Username = document.getElementById("nameUser").value;
     var userData = {
-        Name: document.getElementById("nameUser").value,
+        Name: Username,
         Foto: "-"
     };
 
@@ -11,26 +11,19 @@ function Login(){
     
     var updates = {};
     updates['/User/' + newUserKey] = userData;
+    GoToMainMenue();
+    getUserToPage(Username);
     return firebase.database().ref().update(updates);
-    
-    //console.log(firebase.database().ref().update(updates);)
-
 }
-
 function ReadUser(){
-
+    var Username;
     var UserRef = firebase.database().ref().child('User').child(newUserKey);
-
-
     UserRef.on("value", snap => {
         Username = snap.child("Name").val();
         console.log(Username);
     });
-    
+    return Username;
 }
-
-
-
 function SaveScore(){
     
     var scoreData = {

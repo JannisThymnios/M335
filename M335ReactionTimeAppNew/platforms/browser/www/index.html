@@ -33,28 +33,14 @@
                     <label for="name"><input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." /></label>
                 </li>
                 <li id="listUser">
-<<<<<<< HEAD
                     <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard", onclick="Login()">Bestätigen </button>
-=======
-
-                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard", onclick="Login()">Bestätigen </button>
-
-
-                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">Bestätigen</button>
-
-                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard", onclick="Beclick()">
-                        Bestätigen
-                    </button>
-
-
->>>>>>> 53e9f98e28abacc31276388598dcf5183fd1509e
                 </li>
         </form>
     </container>
-    <container id="menue" onload="">
+    <container id="menue">
         <div>
-            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">Scorerboard</button>
-            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="ExitApp()">Exit </button>
+            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="GoToScoreboard()">Scorerboard</button>
+            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit"onclick="GoToMainMenue()">Exit </button>
         </div>
         <div class="card">
             <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic" onclick="GoToDifficulty()">Classic</button>
@@ -63,11 +49,11 @@
             <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="GoToDifficulty()">Music</button>              
         </div>
         <div>
-            <p></p>
+            <p id="UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture"></p>
         </div>
     </container>
     <container id="difficulty">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit">
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
         <div id="vertical">
@@ -83,7 +69,7 @@
         </div>
     </container>
     <container id="tableScore">
-        <header>Scoreboard</header><button class="left bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit">
+        <header>Scoreboard</header><button class="left bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
         <div class="vert">

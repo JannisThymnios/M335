@@ -97,3 +97,6 @@ function CheckStage(Value) {
     }
 };
 //------------------------------------------------------------------------------------
+function getUserToPage(UserName) {
+    document.getElementById("UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture").innerHTML = UserName;
+}
