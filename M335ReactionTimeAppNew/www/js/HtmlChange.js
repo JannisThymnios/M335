@@ -12,7 +12,7 @@ function UnHideByID(obj) {
 //------------------------------------------------------------------------------------
 //Verlässt die App, oder den Browser
 function ExitApp() {
-    navigator.app.exitApp();
+     GoToMainMenue();
 };
 //------------------------------------------------------------------------------------
 //Versteckt alle Container im HTML Dokument
