@@ -43,10 +43,10 @@
             <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit"onclick="GoToMainMenue()">Exit </button>
         </div>
         <div class="card">
-            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic" onclick="GoToDifficulty()">Classic</button>
+            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic" onclick="GoToDifficulty('Classic')">Classic</button>
             <br>
             <br>
-            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="GoToDifficulty()">Music</button>              
+            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="GoToDifficulty('Music')">Music</button>              
         </div>
         <div>
             <p id="UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture"></p>
@@ -57,13 +57,13 @@
             Exit
         </button>
         <div id="vertical">
-            <button class="bluecolorDiffEasy mdl-button mdl-js-button mdl-button--raised schrift" id="easy">
+            <button class="bluecolorDiffEasy mdl-button mdl-js-button mdl-button--raised schrift" id="easy" value="1" onclick="SetDifficulty(1)">
             Easy
             </button>
-            <button class="bluecolorDiffNormal mdl-button mdl-js-button mdl-button--raised schrift" id="normal">
+            <button class="bluecolorDiffNormal mdl-button mdl-js-button mdl-button--raised schrift" id="normal" value="2" onclick="SetDifficulty(2)">
             Normal
             </button>
-            <button class="bluecolorDiffHard mdl-button mdl-js-button mdl-button--raised schrift" id="hard">
+            <button class="bluecolorDiffHard mdl-button mdl-js-button mdl-button--raised schrift" id="hard" value="3" onclick="SetDifficulty(3)">
             Hard
             </button>
         </div>
