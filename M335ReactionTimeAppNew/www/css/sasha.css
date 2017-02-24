@@ -1,18 +1,46 @@
+*
+{
+    font-family: 'Chewy', cursive;
+}
 .firstPage
 {
     background-color: lightgreen;
     text-align: center;
+}
+.music
+{
+
+}
+.card
+{
+    margin-top: 10em;
+    align: center;
 }
 .liste
 {
     list-style-type: none;
     text-align: center;
 }
-
 #parent
 {
     display: table;
     width: 100%;
+}
+#scorerboard
+{
+    position: relative;
+    margin-left: 0%;
+    margin: 5px;
+    background-color: ghostwhite;
+}
+#exit
+{
+    margin: 5px;
+    background-color: ghostwhite;
+}
+#all
+{
+    text-align: center;
 }
 body
 {
@@ -21,4 +49,8 @@ body
 input
 {
     margin-bottom: 10px;
+}
+a
+{
+    background-color: lightgreen;
 }
