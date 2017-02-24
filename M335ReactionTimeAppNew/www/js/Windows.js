@@ -1,3 +1,3 @@
-function ChangePage() {
-    var Daten = Daten;
-}
+function GoToLogin() {
+    
+};
