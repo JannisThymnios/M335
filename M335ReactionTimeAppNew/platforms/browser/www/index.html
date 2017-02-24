@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
     <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/sasha.css" />
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script>
-    // Initialize Firebase
         var config = {
             apiKey: "AIzaSyA95jk27_EPfucXOyyYAUWOynbZhSjQY0Q",
             authDomain: "reacttimeapp-fe5ac.firebaseapp.com",
@@ -23,55 +23,70 @@
         };
         firebase.initializeApp(config);
     </script>
-    <link rel="stylesheet" type="text/css" href="css/sasha.css" />
     <title>Reaction Time</title>
 </head>
-
 <body>
-
     <container id="logIn">
         <form action="#" id="formular" class="form">
                 <img src="./img/dots.gif" />
                 <li>
-                    <label for="name">
-                        <input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." />
-                    </label>
+                    <label for="name"><input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." /></label>
                 </li>
                 <li id="listUser">
-                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">
+
+                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard", onclick="Login()">Bestätigen </button>
+
+
+                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">Bestätigen</button>
+
+                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard", onclick="Beclick()">
                         Bestätigen
                     </button>
+
+
                 </li>
         </form>
     </container>
-    <container id="menue">
+    <container id="menue" onload="">
         <div>
-            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">
-            Scorerboard
-            </button>
-            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit">
-            Exit
-            </button>
+            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">Scorerboard</button>
+            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="ExitApp()">Exit </button>
         </div>
         <div class="card">
-            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic">
-            Classic
-            </button>
+            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic" onclick="GoToDifficulty()">Classic</button>
             <br>
             <br>
-            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music">
-            Music
-            </button>              
+            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="GoToDifficulty()">Music</button>              
         </div>
+        <div>
+            <p></p>
+        </div>
+    </container>
+    <container id="difficulty">
+        <div id="vertical">
+            <button class="bluecolorDiffEasy mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">
+            Easy
+            </button>
+            <button class="bluecolorDiffNormal mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">
+            Normal
+            </button>
+            <button class="bluecolorDiffHard mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard">
+            Hard
+            </button>
+        </div>
+    </container>
+    <container id="classicGame">
+    </container>
+    <container id="musicGame">
     </container>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
     <script type="text/javascript" src="js/HtmlChange.js"></script>
+    <script type="text/javascript" src="js/Windows.js"></script>
     <script type="text/javascript">
-        app.initialize();
+        //app.initialize();
     </script>
 </body>
-
 </html>

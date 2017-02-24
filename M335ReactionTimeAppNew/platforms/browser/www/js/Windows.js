@@ -5,7 +5,7 @@ function GoToLogin() {
 };
 //------------------------------------------------------------------------------------
 //Zeigt Hauptmenü
-function GoToMainMenue() {
+function GoToMainMenue(UserName) {
     HideAllContainer();
     UnHideByID("menue");
 };

@@ -1,32 +1,37 @@
 
-function Beclick(){
-
-    
+var newUserKey;
+function Login(){
+    var Username;
     var userData = {
         Name: document.getElementById("nameUser").value,
         Foto: "-"
     };
 
-    var newUserKey = firebase.database().ref().child('User').push().key;
+    newUserKey = firebase.database().ref().child('User').push().key;
     
-
     var updates = {};
     updates['/User/' + newUserKey] = userData;
+    return firebase.database().ref().update(updates);
+    
+    //console.log(firebase.database().ref().update(updates);)
+
+}
+
+function ReadUser(){
 
     var UserRef = firebase.database().ref().child('User').child(newUserKey);
 
-    UserRef.on("value", snap => console.log(snap.child("Name").val()));
 
-    //console.log(firebase.database().ref().update(updates);)
-
-    return firebase.database().ref().update(updates);
-    
-
+    UserRef.on("value", snap => {
+        Username = snap.child("Name").val();
+        console.log(Username);
+    });
     
 }
 
 
-function ScoreSpeichern(){
+
+function SaveScore(){
     
     var scoreData = {
         Name: "Muster",
@@ -43,20 +48,15 @@ function ScoreSpeichern(){
     return firebase.database().ref().update(updates2);
 }
 
+function ReadScore(){
 
-
-
-function ScoreLesen(){
     var ScoreRef = firebase.database().ref().child('Score');
-
     UserRef.on("child.added", snap => {
         var Username = snap.child("Name").val();
         var Mode = snap.child("Mode").val();
         var Schwieigkeit = snap.child("Difficulty").val();
         var score = snap.child("Score").val();
-
         //weiterer Code kommt noch sobald die Scoreboardseite existiert.
-
         window.alert(Username);
     });
 
