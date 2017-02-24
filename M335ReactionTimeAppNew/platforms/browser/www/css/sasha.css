@@ -14,15 +14,35 @@
     font-family: 'Chewy', cursive;
 
 }
-.liste
+li
 {
     list-style-type: none;
     text-align: center;
+}
+#nameUser
+{
+    padding: 8px;
+    border-radius: 5px;
+    background-color: lightblue;
+    width: 60%;
+    margin: auto;
+}
+#listUser
+{
+    margin: 10px;
 }
 .b1
 {
     width: 10em;
     height: 10em;
+}
+.NoHover
+{
+    background-color: lightblue;
+}
+.NoHover:hover
+{
+    background-color: lightblue;
 }
 .bluecolor
 {
@@ -99,7 +119,30 @@ color: #fff;
 {
     text-align: center;
 }
-#menue
+#logIn
 {
     display: none;
+}
+.mdl-textfield__input
+{
+    font-family: 'Chewy', cursive;
+    color: white;
+    font-size: 1.9em;
+    
+}
+
+input::-webkit-input-placeholder {
+color: white !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: white !important;  
 }
