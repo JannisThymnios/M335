@@ -13,6 +13,8 @@ function Login(){
     updates['/User/' + newUserKey] = userData;
     GoToMainMenue();
     getUserToPage(Username);
+    SaveScore();
+    ReadScore();
     return firebase.database().ref().update(updates);
 }
 function ReadUser(){
@@ -44,13 +46,13 @@ function SaveScore(){
 function ReadScore(){
 
     var ScoreRef = firebase.database().ref().child('Score');
-    UserRef.on("child.added", snap => {
+    ScoreRef.on("child_added", snap => {
         var Username = snap.child("Name").val();
         var Mode = snap.child("Mode").val();
         var Schwieigkeit = snap.child("Difficulty").val();
         var score = snap.child("Score").val();
         //weiterer Code kommt noch sobald die Scoreboardseite existiert.
-        window.alert(Username);
+        $("#table_body").append("<tr class='bor'><td class='pad'>1.</td class='pad'><td class='pad'>" +  Username + "</td class='pad'><td class='pad'>" + score + "</td class='pad'></tr class='bor'>")
     });
 
     
