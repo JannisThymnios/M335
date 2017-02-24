@@ -3,20 +3,38 @@ function Beclick(){
 
     
     var userData = {
-        name: document.getElementById("nameUser").value,
-        foto: "-"
+        Name: document.getElementById("nameUser").value,
+        Foto: "-"
     };
 
     var newUserKey = firebase.database().ref().child('User').push().key;
-    console.log(newUserKey);
+    
 
     var updates = {};
     updates['/User/' + newUserKey] = userData;
 
+    var UserRef = firebase.database().ref().child('User').child(newUserKey);
+
+    UserRef.on("value", snap => console.log(snap.child("Name").val()));
+
+    //console.log(firebase.database().ref().update(updates);)
+
     return firebase.database().ref().update(updates);
     
 
-    /*var firebaseref = firebase.database().ref();
-    firebaseref.child("User").set("PPOP");
-    window.alert("PPOP");*/
+    
 }
+
+
+
+/*function NameUser(){
+    var UserRef = firebase.database().ref().child('User').key(;
+
+    UserRef.on("value", snap => {
+        var Username = snap.child("Name").val();
+
+        window.alert(Username);
+    });
+
+    
+}*/
