@@ -4,13 +4,7 @@ function Beclick(){
         Name: document.getElementById("nameUser").value,
         Foto: "-"
     };
-
-
      newUserKey = firebase.database().ref().child('User').push().key;
-    
-
-
-    var newUserKey = firebase.database().ref().child('User').push().key;
 
     var updates = {};
     updates['/User/' + newUserKey] = userData;
@@ -25,9 +19,6 @@ function Beclick(){
     //console.log(firebase.database().ref().update(updates);)
 
     return Username
-    
-
-    
 
 }
 
@@ -48,8 +39,6 @@ function ScoreSpeichern(){
 
     return firebase.database().ref().update(updates2);
 }
-
-
 
 
 function ScoreLesen(){
