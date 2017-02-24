@@ -54,3 +54,40 @@ a
 {
     background-color: lightgreen;
 }
+
+ .demo-card-wide.mdl-card {
+width: 50%;
+margin: auto;
+}
+.demo-card-wide > .mdl-card__title {
+color: #fff;
+height: 176px; 
+}
+.demo-card-wide > .mdl-card__menu {
+color: #fff;
+}
+.mdl-card__title-text
+{
+    color: green;
+}
+.mdl-card__actions
+{
+    background-color: lightgreen;
+    color: white;
+}
+.mdl-button
+{
+    background-color: white;
+}
+.class
+{
+    margin-right: 60%;
+}
+.mdl-card
+{
+    text-align: center;
+}
+#logIn
+{
+    display: none;
+}
