@@ -154,7 +154,7 @@ color: #fff;
 {
     text-align: center;
 }
-#logIn, #menue
+#logIn, #menue, #difficulty
 {
     display: none;
 }
@@ -165,7 +165,16 @@ color: #fff;
     font-size: 1.9em;
     
 }
-
+.demo-list-icon {
+  width: 300px;
+}
+.tableScore
+{
+    height: 70%;
+    margin-top: 5em;
+    background-color: lightblue;
+    border-radius: 15px;
+}
 input::-webkit-input-placeholder {
 color: white !important;
 }
@@ -180,4 +189,34 @@ color: white !important;
  
 input:-ms-input-placeholder {  
 color: white !important;  
+}
+header
+{
+    margin-top: 1em;
+    font-size: 5rem;
+}
+#easy, #normal, #hard
+{
+    position: relative;
+    margin-left: 0%;
+    margin: 5px;
+}
+.pad
+{
+    color: white;
+    padding: 1.2em;
+    border-radius: 4px;
+    font-size: 1.5em;
+    
+}
+table
+{
+    width: 50%;
+    margin: auto;
+}
+.left
+{
+    position: absolute;
+    left: 0%;
+    top: 0%;
 }
