@@ -63,10 +63,10 @@
 </head>
 
 <body>
-   <form action="#" id="formular" class="form">
+   <form action="#" id="formular" class="form" name="LoginForm">
                 <ul class="liste">
                         <label for="name">
-                            <input id="nameUser" type="text" placeholder="Namen..." />
+                            <input name="nameUser"id="nameUser" type="text" placeholder="Namen..." />
                         </label>
                         <br/>
                         <button name="absenden" id="Bestaetigen" type="button" onclick="Beclick()">Bestätigen</button>
@@ -77,12 +77,11 @@
                     </button>
                 </ul>
             </form>
-
-    
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/HtmlChange.js"></script>
     <script type="text/javascript">
         app.initialize();
     </script>
