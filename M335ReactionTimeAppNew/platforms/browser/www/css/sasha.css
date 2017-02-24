@@ -49,6 +49,33 @@ li
     background-color: lightblue;
     
 }
+.bluecolorDiffEasy
+{
+    background-color: darkolivegreen;
+    
+}
+.bluecolorDiffEasy:hover
+{
+    background-color: darkblue;
+}
+.bluecolorDiffNormal
+{
+    background-color: darkorange;
+    
+}
+.bluecolorDiffNormal:hover
+{
+    background-color: darkblue;
+}
+.bluecolorDiffHard
+{
+    background-color: darkred;
+    
+}
+.bluecolorDiffHard:hover
+{
+    background-color: darkblue;
+}
 .bluecolor:hover
 {
     background-color: darkblue;
@@ -67,6 +94,14 @@ li
 #exit
 {
     margin: 5px;
+}
+#vertical
+{
+    position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
 }
 #all
 {
@@ -119,7 +154,7 @@ color: #fff;
 {
     text-align: center;
 }
-#logIn
+#logIn, #menue
 {
     display: none;
 }
