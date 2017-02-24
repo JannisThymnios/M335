@@ -1,4 +1,4 @@
-
+var newUserKey = "";
 function Beclick(){
 
     
@@ -7,7 +7,7 @@ function Beclick(){
         Foto: "-"
     };
 
-    var newUserKey = firebase.database().ref().child('User').push().key;
+     newUserKey = firebase.database().ref().child('User').push().key;
     
 
     var updates = {};
