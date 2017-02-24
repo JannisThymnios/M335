@@ -8,10 +8,25 @@ function Beclick(){
     var updates = {};
     updates['/User/' + newUserKey] = userData;
     var UserRef = firebase.database().ref().child('User').child(newUserKey);
+<<<<<<< HEAD
     UserRef.on("value", snap => console.log(snap.child("Name").val()));
     //console.log(firebase.database().ref().update(updates);)
 
     return firebase.database().ref().update(updates);
+=======
+
+    UserRef.on("value", snap => {
+        var Username = snap.child("Name").val();
+
+    });
+
+    //console.log(firebase.database().ref().update(updates);)
+
+    return Username
+    
+
+    
+>>>>>>> 09922fee691fbf17b07accbce760a96733ae1355
 }
 
 
