@@ -33,14 +33,14 @@
                     <label for="name"><input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." /></label>
                 </li>
                 <li id="listUser">
-                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard", onclick="Login()">Bestätigen </button>
+                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="Login()">Bestätigen </button>
                 </li>
         </form>
     </container>
     <container id="menue">
         <div>
             <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="GoToScoreboard()">Scorerboard</button>
-            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit"onclick="GoToMainMenue()">Exit </button>
+            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">Exit </button>
         </div>
         <div class="card">
             <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic" onclick="GoToDifficulty('Classic')">Classic</button>
@@ -49,7 +49,7 @@
             <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="GoToDifficulty('Music')">Music</button>              
         </div>
         <div>
-            <p id="UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture"></p>
+            <p class="name" id="UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture"></p>
         </div>
     </container>
     <container id="difficulty">
@@ -109,20 +109,27 @@
                     </tr>-->
                 </tbody>
             </table>
-        <div>
+        </div>
     </container>
     <container id="classicGame">
-        asdfasdjfa
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit">
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
+        
+        <!--<p id="getReady">Get Ready...</p>-->
+        <button class="fullSize mdl-button mdl-js-button mdl-button--raised schrift" id="changeColor" onclick="checkTime()"></button>
+        <p id="getName">Punkte: 0</p>
     </container>
     <container id="musicGame">
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
+            Exit
+        </button>
     </container>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
     <script type="text/javascript" src="js/HtmlChange.js"></script>
     <script type="text/javascript" src="js/Windows.js"></script>
     <script type="text/javascript">

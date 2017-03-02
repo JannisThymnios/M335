@@ -1,8 +1,9 @@
 
 var newUserKey;
+var Username = "";
 function Login(){
     //Erstellt Tabelle User und fügt die Werte hinzu
-    var Username = document.getElementById("nameUser").value;
+    Username = document.getElementById("nameUser").value;
     var userData = {
         Name: Username,
         Foto: "-"
