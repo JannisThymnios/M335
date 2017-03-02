@@ -112,14 +112,16 @@
         </div>
     </container>
     <container id="classicGame">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit">
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
-        <!--<p>Get Ready...</p>-->
-        <button class="fullSize mdl-button mdl-js-button mdl-button--raised schrift" id="changeColor"></button>
+        
+        <!--<p id="getReady">Get Ready...</p>-->
+        <button class="fullSize mdl-button mdl-js-button mdl-button--raised schrift" id="changeColor" onclick="checkTime()"></button>
+        <p id="getName">Punkte: 0</p>
     </container>
     <container id="musicGame">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit">
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
     </container>
@@ -127,6 +129,7 @@
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/database.js"></script>
     <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/timer.js"></script>
     <script type="text/javascript" src="js/HtmlChange.js"></script>
     <script type="text/javascript" src="js/Windows.js"></script>
     <script type="text/javascript">

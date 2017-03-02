@@ -15,6 +15,7 @@ function GoToMainMenue() {
 function GoToClassicGameMode() {
     HideAllContainer();
     UnHideByID("classicGame");
+    game();
 };
 //------------------------------------------------------------------------------------
 //Zeigt Music Spielmodus
@@ -42,3 +43,13 @@ function GoToDifficulty(Value) {
     UnHideByID("difficulty");  
 };
 //------------------------------------------------------------------------------------
+//Um den Start zu verzögern
+function wait(ms)
+{
+    var start = new Date().getTime();
+    var end = start;
+    while(end < start + ms)
+    {
+        end = new Date().getTime();
+    }
+}
