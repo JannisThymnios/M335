@@ -13,7 +13,7 @@ function GoToMainMenue() {
 //Zeigt Klassischen Spielmodus
 function GoToClassicGameMode() {
     HideAllContainer();
-    UnHideByID("classicmode");
+    UnHideByID("classicGame");
 };
 //------------------------------------------------------------------------------------
 //Zeigt Music Spielmodus
@@ -35,7 +35,8 @@ function GoToHelp() {
 };
 //------------------------------------------------------------------------------------
 //Zeigt Schwierigkeit
-function GoToDifficulty() {
+function GoToDifficulty(Value) {
+    SetGameMode(Value);
     HideAllContainer();
     UnHideByID("difficulty");  
 };

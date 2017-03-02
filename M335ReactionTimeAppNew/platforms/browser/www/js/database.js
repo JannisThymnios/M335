@@ -21,10 +21,10 @@ function ReadUser(){
     var Username;
     var UserRef = firebase.database().ref().child('User').child(newUserKey);
     UserRef.on("value", snap => {
-        Username = snap.child("Name").val();
-        console.log(Username);
+        return snap.child("Name").val();
     });
-    return Username;
+    
+    
 }
 function SaveScore(){
     

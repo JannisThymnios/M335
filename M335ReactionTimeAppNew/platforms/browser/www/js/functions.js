@@ -25,7 +25,7 @@ function SetGameMode(Value) {
         GameMode = "Music"
     } else {
         //ERROR noch abfangen                                                                   TODO
-    }
+    } 
 };
 //------------------------------------------------------------------------------------
 //Setzt die Difficulty aufgrund der HTML Selektion
@@ -54,7 +54,8 @@ function BackToMainMenu() {
 function SetGameSessionValues() {
     GameMode = GameMode;        //Temporär zur Übersicht
     Difficulty = Difficulty;    //Temporär zur Übersicht
-    User = GetUserName();       //Holt User aus DB (Firebase)
+    User = ReadUser();       //Holt User aus DB (Firebase)
+    console.log(Difficulty + User + GameMode);
     StartScore = StartScore;    //Temporär zur Übersicht
     StartTimer = StartTimer;    //Temporär zur Übersicht
 };
@@ -79,11 +80,9 @@ function GoToScoreboard() {
 function GoToStage() {
     if(currentPunktezahl == 0) { //Dann ist es die erste Runde also müssen Werte gesetzt werden
         SetGameSessionValues();
-        //Hide alle nicht ClassicGameMode ID Elemente                                               TODO
-        //Und Zeige alle ClassicGameMode ID Elemente                                                TODO
+        GoToClassicGameMode();
     } else {
-        //Hide alle nicht ClassicGameMode ID Elemente                                               TODO
-        //Und Zeige alle ClassicGameMode ID Elemente                                                TODO
+        GoToClassicGameMode();
     }
 };
 //------------------------------------------------------------------------------------
