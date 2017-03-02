@@ -26,6 +26,7 @@ function StagePassed() {
     }
     else
     {
+        SaveScore(GameMode, Difficulty, currentPunktezahl);
         ResetValues();
         GoToScoreboard();
     }
@@ -185,6 +186,7 @@ function game()
     }
     else
     {
+        SaveScore(GameMode, Difficulty, currentPunktezahl);
         ResetValues();
         GoToScoreboard();
     }

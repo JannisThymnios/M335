@@ -15,27 +15,25 @@ function Login(){
     updates['/User/' + newUserKey] = userData;
     GoToMainMenue();
     getUserToPage(Username);
-    SaveScore();
-    ReadScore();
     return firebase.database().ref().update(updates);
 }
 function ReadUser(){
     //Ruft die Werte von der Tabelle User auf
     var Username;
     var UserRef = firebase.database().ref().child('User').child(newUserKey);
-    UserRef.on("value", snap => {
+    UserRef.on("child_added", snap => {
         return snap.child("Name").val();
     });
     
     
 }
-function SaveScore(){
+function SaveScore(Mode, Difficulty, Score){
     //Erstellt Tabelle Score und fügt die Werte hinzu
     var scoreData = {
-        Name: "Muster",
-        Mode: "Classic",
-        Difficulty: "Einfach",
-        Score: "5000"
+        Name: Username,
+        Mode: Mode,
+        Difficulty: Difficulty,
+        Score: Score
     };
 
     var newScoreKey = firebase.database().ref().child('Score').push().key;
@@ -48,9 +46,15 @@ function SaveScore(){
 
 function ReadScore(){
     //Ruft die Werte von Score auf
+    var Werte = []
+   
+
     var ScoreRef = firebase.database().ref().child('Score');
     ScoreRef.on("child_added", snap => {
-        var Username = snap.child("Name").val();
+        //var Username = snap.child("Name").val();
+        Werte.push(snap.val());
+        
+        /*var Username = snap.child("Name").val();
         var Mode = snap.child("Mode").val();
         var Schwieigkeit = snap.child("Difficulty").val();
         var score = snap.child("Score").val();
@@ -61,8 +65,17 @@ function ReadScore(){
                 <td class="pad">1.</td>\
                 <td class="pad">' +  Username + '</td>\
                 <td class= "pad">' + score + '</td>\
-            </tr>'
+            </tr>'*/
+        
     });
+    Werte.sort(function(a, b) {
+        return parseInt(a.Score) - parseFloat(b.Score);
+        
+});
+    console.log(Werte);
 
+    
+    
+    
     
 }
