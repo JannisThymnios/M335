@@ -46,7 +46,7 @@
             <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="classic" onclick="GoToDifficulty('Classic')">Classic</button>
             <br>
             <br>
-            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="GoToDifficulty('Music')">Music (Not working)</button>              
+            <button class="bluecolor b1 mdl-button mdl-js-button mdl-button--raised schrift" id="music" onclick="#">Music (Not working)</button>              
         </div>
         <div>
             <p class="name" id="UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture"></p>
@@ -67,6 +67,7 @@
             Hard
             </button>
         </div>
+         <button id="helpButton" class="mdl-button mdl-js-button mdl-button--raised schrift" onclick="GoToHelp()">?</button>
     </container>
     <container id="tableScore">
         <header class="left">Scoreboard</header><button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
@@ -124,6 +125,13 @@
         <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
+    </container>
+    <container id="help">
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
+            Exit
+        </button>
+        <p id="MusicHelp">Not Working</p>
+        <p id="ClassicHelp">Drücke auf die Fläche sobald sich die Farbe geändert hat. Je nach Schwierigkeit, musst du schneller reagieren. Wenn du es innerhalb der Zeit geschafft hast, bekommst du einen Punkt, dafür musst du das nächste mal, noch schneller auf die Fläche drücken.<br><br>Viel Spass!</p>
     </container>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
