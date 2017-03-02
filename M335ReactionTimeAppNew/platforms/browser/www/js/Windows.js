@@ -1,5 +1,6 @@
 //Zeigt Login
 function GoToLogin() {
+    console.log('GoToLogin')
     HideAllContainer();
     UnHideByID("logIn");
 };

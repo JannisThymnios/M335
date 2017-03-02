@@ -33,8 +33,9 @@ li
 }
 .b1
 {
-    width: 10em;
-    height: 10em;
+    text-align: middle;
+    width: 90%;
+    height: 25vh;
 }
 .NoHover
 {
@@ -85,7 +86,7 @@ li
     display: table;
     width: 100%;
 }
-#menue, #difficulty, #tableScore{
+#menue, #difficulty, #tableScore, #classicGame, #musicGame{
     display: none;
 }
 #scorerboard
@@ -121,6 +122,17 @@ input
 a
 {
     background-color: lightgreen;
+}
+p
+{
+    width: 80%;
+    padding: auto;
+    font-size: 10vh;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
  .demo-card-wide.mdl-card {
 width: 50%;
@@ -190,7 +202,7 @@ color: white !important;
 header
 {
     margin-top: 1em;
-    font-size: 5rem;
+    font-size: 250%;
 }
 #easy, #normal, #hard
 {
@@ -201,7 +213,10 @@ header
 .pad
 {
     color: white;
-    padding: 1.2em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    padding-left: 10%;
+    padding-right: 10%;
     border-radius: 4px;
     font-size: 1.5em;
     
@@ -215,9 +230,22 @@ table
 {
     margin-bottom: 0.5em;
 }
-p
+.name
 {
     margin-top: 0.5em;
     color: white;
     font-size: 2em;
+}
+.fullSize
+{
+    width: 90%;
+    height: 70vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#changeColor
+{
+    background: lightblue;
 }

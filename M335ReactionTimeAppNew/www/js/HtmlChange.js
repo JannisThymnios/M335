@@ -20,6 +20,7 @@ function HideAllContainer() {
     var containers = document.getElementsByTagName("container");
     for(var i = 0; i < containers.length; i++) {
         containers[i].style.display = 'none';
+        console.log(containers[i]);
     }
 };
 //------------------------------------------------------------------------------------
