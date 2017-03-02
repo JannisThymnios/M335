@@ -15,7 +15,7 @@ function Login(){
     updates['/User/' + newUserKey] = userData;
     GoToMainMenue();
     getUserToPage(Username);
-    SaveScore();
+    //SaveScore();
     ReadScore();
     return firebase.database().ref().update(updates);
 }
@@ -35,7 +35,7 @@ function SaveScore(){
         Name: "Muster",
         Mode: "Classic",
         Difficulty: "Einfach",
-        Score: 5000
+        Score: "5000"
     };
 
     var newScoreKey = firebase.database().ref().child('Score').push().key;
@@ -49,6 +49,7 @@ function SaveScore(){
 function ReadScore(){
     //Ruft die Werte von Score auf
     var Werte = []
+    var Test = [1, 100, 5, 2, 100]
    
 
     var ScoreRef = firebase.database().ref().child('Score');
@@ -69,13 +70,28 @@ function ReadScore(){
                 <td class= "pad">' + score + '</td>\
             </tr>'*/
         
-    });
-    Werte.sort(function(a, b) {
-        return parseInt(a.Score) - parseFloat(b.Score);
+        Werte.sort(function(a, b) {
+            return b.Score - a.Score;
         
-});
-    console.log(Werte);
+        });
+        var html = "";
+        for(var i = 1; i < Werte.length; i++){
+            html += '<tr class="bor">';
+            html += '<td class="pad">' + i + '.</td>';
+            html += '<td class="pad">' +  Werte[i].Name + '</td>';
+            html += '<td class="pad">' +  Werte[i].Score + '</td>';
 
+            html += '</tr>'
+        }
+
+    document.getElementById("table_body").innerHTML = html;
+    });
+
+
+    
+    
+    
+    
     
     
     
