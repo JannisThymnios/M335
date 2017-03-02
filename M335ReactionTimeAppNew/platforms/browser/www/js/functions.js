@@ -112,8 +112,6 @@ function checkTime() {
     var sec = date.getSeconds();
     var ms = date.getMilliseconds();
     EndZeitpunkt = min.toString()+sec.toString()+ms.toString();
-    console.log(Startzeitpunkt);
-
     if(Startzeitpunkt != "")
     {
         if(parseInt(EndZeitpunkt) - parseInt(Startzeitpunkt) <= currentMaxTiming)
