@@ -9,7 +9,7 @@
 }
 .card
 {
-    margin-top: 10em;
+    margin-top: 3em;
     align: center;
     font-family: 'Chewy', cursive;
 
@@ -85,7 +85,7 @@ li
     display: table;
     width: 100%;
 }
-#menue, #difficulty, #tableScore {
+#menue, #difficulty, #tableScore{
     display: none;
 }
 #scorerboard
@@ -169,8 +169,7 @@ color: #fff;
 }
 .tableScore
 {
-    height: 70%;
-    margin-top: 5em;
+    margin-top: 1em;
     background-color: lightblue;
     border-radius: 15px;
 }
@@ -215,7 +214,11 @@ table
 }
 .left
 {
-    position: absolute;
-    left: 0%;
-    top: 0%;
+    margin-bottom: 0.5em;
+}
+p
+{
+    margin-top: 0.5em;
+    color: white;
+    font-size: 2em;
 }
