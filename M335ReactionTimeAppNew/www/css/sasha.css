@@ -2,11 +2,13 @@
 {
     font-family: 'Chewy', cursive;
 }
-.firstPage
+
+/*.firstPage 
 {
     background-color: #8cbe5f;
     text-align: center;
 }
+*/
 .card
 {
     margin-top: 3em;
@@ -19,7 +21,7 @@ li
     list-style-type: none;
     text-align: center;
 }
-#nameUser
+#nameUser /*Style für das Inputfeld beim LogIn*/
 {
     padding: 8px;
     border-radius: 5px;
@@ -27,57 +29,39 @@ li
     width: 60%;
     margin: auto;
 }
-#listUser
+#listUser /*Bestätigungsbutton vom LogInFenster*/
 {
     margin: 10px;
 }
-.b1
+.b1 /*Button für die Auswhl von Music oder Classic */
 {
     text-align: middle;
     width: 90%;
     height: 25vh;
 }
-.NoHover, .bluecolor, .NoHover:hover
+.NoHover, .bluecolor, .NoHover:hover /*Klassen, die diese Farbe vom Button brauchen*/
 {
     background-color: #486e88;;
 }
 
-.bluecolorDiffEasy
+.bluecolorDiffEasy /*Zeile 47 - 62 sind fpr die Farben der Schwierigkeitsgrad Buttons und die Hover Farbe */ 
 {
-    background-color: darkolivegreen;
-    
-}
-.bluecolorDiffEasy:hover
-{
-    background-color: darkblue;
+    background-color: darkolivegreen;   
 }
 .bluecolorDiffNormal
 {
     background-color: darkorange;
-    
-}
-.bluecolorDiffNormal:hover
-{
-    background-color: darkblue;
 }
 .bluecolorDiffHard
 {
     background-color: darkred;
-    
 }
-.bluecolorDiffHard:hover
+.bluecolorDiffHard:hover, .bluecolor:hover, .bluecolorDiffNormal:hover, .bluecolorDiffEasy:hover
 {
     background-color: darkblue;
 }
-.bluecolor:hover
-{
-    background-color: darkblue;
-}
-#parent
-{
-    display: table;
-    width: 100%;
-}
+
+/*Zum verstecken der Container am Anfang */
 #menue, #difficulty, #tableScore, #classicGame, #musicGame, #help{
     display: none;
 }
@@ -102,7 +86,7 @@ li
 {
     text-align: center;
 }
-body
+body, a
 {
     background-color: #8cbe5f;
 }
@@ -110,10 +94,6 @@ input
 {
     width: 30em;
     margin-bottom: 10px;
-}
-a
-{
-    background-color: #8cbe5f;
 }
 #getReady
 {
@@ -135,7 +115,8 @@ a
     margin: auto;
     margin-top: 15px;
 }
- .demo-card-wide.mdl-card {
+/*Am Anfang war geplant mit MDL Cards zu arbiten
+/* .demo-card-wide.mdl-card {
 width: 50%;
 margin: auto;
 }
@@ -154,7 +135,7 @@ color: #fff;
 {
     background-color: #8cbe5f;
     color: white;
-}
+}*/
 .mdl-button
 {
     color: white;
@@ -214,10 +195,10 @@ header
 .pad
 {
     color: white;
-    padding-top: 0.7em;
+    /*padding-top: 0.7em;
     padding-bottom: 0.7em;
     padding-left: 10%;
-    padding-right: 10%;
+    padding-right: 10%;*/
     border-radius: 4px;
     font-size: 1.5em;
     
@@ -230,6 +211,7 @@ table
 .left
 {
     margin-bottom: 0.5em;
+    color: white;
 }
 .name
 {

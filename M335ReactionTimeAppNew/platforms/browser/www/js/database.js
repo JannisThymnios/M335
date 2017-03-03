@@ -35,11 +35,6 @@ function SaveScore(Mode, Difficulty, Score){
     //Erstellt Tabelle Score und fügt die Werte hinzu
     var scoreData = {
 
-        Name: "Muster",
-        Mode: "Classic",
-        Difficulty: "Einfach",
-        Score: "5000"
-
         Name: Username,
         Mode: Mode,
         Difficulty: Difficulty,
@@ -58,7 +53,7 @@ function SaveScore(Mode, Difficulty, Score){
 function ReadScore(){
     //Ruft die Werte von Score auf
     var Werte = []
-    var Test = [1, 100, 5, 2, 100]
+    
    
 
     var ScoreRef = firebase.database().ref().child('Score');
