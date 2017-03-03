@@ -26,6 +26,7 @@ function StagePassed() {
     }
     else
     {
+        SaveScore(GameMode, Difficulty, currentPunktezahl);
         ResetValues();
         GoToScoreboard();
     }
@@ -111,8 +112,6 @@ function checkTime() {
     var sec = date.getSeconds();
     var ms = date.getMilliseconds();
     EndZeitpunkt = min.toString()+sec.toString()+ms.toString();
-    console.log(Startzeitpunkt);
-
     if(Startzeitpunkt != "")
     {
         if(parseInt(EndZeitpunkt) - parseInt(Startzeitpunkt) <= currentMaxTiming)
@@ -185,6 +184,7 @@ function game()
     }
     else
     {
+        SaveScore(GameMode, Difficulty, currentPunktezahl);
         ResetValues();
         GoToScoreboard();
     }

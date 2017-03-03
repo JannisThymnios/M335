@@ -15,8 +15,10 @@ function Login(){
     updates['/User/' + newUserKey] = userData;
     GoToMainMenue();
     getUserToPage(Username);
+
     //SaveScore();
     ReadScore();
+
     return firebase.database().ref().update(updates);
 }
 function ReadUser(){
@@ -29,13 +31,20 @@ function ReadUser(){
     
     
 }
-function SaveScore(){
+function SaveScore(Mode, Difficulty, Score){
     //Erstellt Tabelle Score und fügt die Werte hinzu
     var scoreData = {
+
         Name: "Muster",
         Mode: "Classic",
         Difficulty: "Einfach",
         Score: "5000"
+
+        Name: Username,
+        Mode: Mode,
+        Difficulty: Difficulty,
+        Score: Score
+
     };
 
     var newScoreKey = firebase.database().ref().child('Score').push().key;
@@ -74,7 +83,7 @@ function ReadScore(){
             return b.Score - a.Score;
         
         });
-        var html;
+        var html = "";
         for(var i = 1; i < Werte.length; i++){
             html += '<tr class="bor">';
             html += '<td class="pad">' + i + '.</td>';

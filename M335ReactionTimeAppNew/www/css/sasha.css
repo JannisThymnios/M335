@@ -78,7 +78,7 @@ li
     display: table;
     width: 100%;
 }
-#menue, #difficulty, #tableScore, #classicGame, #musicGame{
+#menue, #difficulty, #tableScore, #classicGame, #musicGame, #help{
     display: none;
 }
 #scorerboard
@@ -126,7 +126,7 @@ a
     left: 50%;
     transform: translate(-50%, -50%);
 }
-p
+#getName
 {
     font-size: 5vh;
     color: white;
@@ -250,4 +250,20 @@ table
 {
     margin-top: 30px;
     background: #486e88;
+}
+#helpButton
+{
+    background-color: darkblue;
+    position: absolute;
+    right: 2%;
+    bottom: 2%;
+}
+#ClassicHelp, #MusicHelp
+{
+    color: white;
+    font-size: 25px;
+}
+#helpButton
+{
+    border-radius: 100px;
 }
