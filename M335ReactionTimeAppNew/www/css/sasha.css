@@ -2,24 +2,18 @@
 {
     font-family: 'Chewy', cursive;
 }
-.firstPage
-{
-    background-color: #8cbe5f;
-    text-align: center;
-}
 .card
 {
     margin-top: 3em;
     align: center;
     font-family: 'Chewy', cursive;
-
 }
 li
 {
     list-style-type: none;
     text-align: center;
 }
-#nameUser
+#nameUser /*Style für das Inputfeld beim LogIn*/
 {
     padding: 8px;
     border-radius: 5px;
@@ -27,216 +21,166 @@ li
     width: 60%;
     margin: auto;
 }
-#listUser
+#listUser /*Bestätigungsbutton vom LogInFenster*/
 {
     margin: 10px;
 }
-.b1
+.b1 /*Button für die Auswhl von Music oder Classic */
 {
     text-align: middle;
     width: 90%;
     height: 25vh;
 }
-.NoHover, .bluecolor, .NoHover:hover
+.NoHover, .bluecolor, .NoHover:hover /*Klassen, die diese Farbe vom Button brauchen*/
 {
     background-color: #486e88;;
 }
-
-.bluecolorDiffEasy
+.bluecolorDiffEasy /*Zeile 47 - 62 sind fpr die Farben der Schwierigkeitsgrad Buttons und die Hover Farbe */ 
 {
-    background-color: darkolivegreen;
-    
-}
-.bluecolorDiffEasy:hover
-{
-    background-color: darkblue;
+    background-color: darkolivegreen;   
 }
 .bluecolorDiffNormal
 {
     background-color: darkorange;
-    
-}
-.bluecolorDiffNormal:hover
-{
-    background-color: darkblue;
 }
 .bluecolorDiffHard
 {
     background-color: darkred;
-    
 }
-.bluecolorDiffHard:hover
+.bluecolorDiffHard:hover, .bluecolor:hover, .bluecolorDiffNormal:hover, .bluecolorDiffEasy:hover
 {
     background-color: darkblue;
 }
-.bluecolor:hover
+/*Zum verstecken der Container am Anfang */
+#menue, #difficulty, #tableScore, #classicGame, #musicGame, #help
 {
-    background-color: darkblue;
-}
-#parent
-{
-    display: table;
-    width: 100%;
-}
-#menue, #difficulty, #tableScore, #classicGame, #musicGame, #help{
     display: none;
 }
+/*Einstellung des Bestätigungsbuttons und Scorerboardbutton*/
 #scorerboard
 {
     position: relative;
     margin-left: 0%;
     margin: 5px;
 }
+/*ExitKnopf*/
 #exit
 {
     margin: 5px;
 }
-#vertical
+#vertical /*Wenn etwas genau in der Mitte sein soll*/
 {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#all
+#all /*Für html*/
 {
     text-align: center;
 }
-body
+body, a /*Background für body und a*/
 {
     background-color: #8cbe5f;
 }
-input
+input /*inputfelder*/
 {
     width: 30em;
     margin-bottom: 10px;
 }
-a
+
+#getName /*Die Punkte die während dem Spiel angezeigt werden*/
 {
-    background-color: #8cbe5f;
-}
-#getReady
-{
-    width: 80%;
-    padding: auto;
-    font-size: 10vh;
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-#getName
-{
-    font-size: 5vh;
+    font-size: 2vh;
     color: white;
     width: 80%;
     text-align: center;
     margin: auto;
     margin-top: 15px;
 }
- .demo-card-wide.mdl-card {
-width: 50%;
-margin: auto;
-}
-.demo-card-wide > .mdl-card__title {
-color: #fff;
-height: 176px; 
-}
-.demo-card-wide > .mdl-card__menu {
-color: #fff;
-}
-.mdl-card__title-text
-{
-    color: green;
-}
-.mdl-card__actions
-{
-    background-color: #8cbe5f;
-    color: white;
-}
-.mdl-button
+.mdl-button /*Die Buttons von mdl*/
 {
     color: white;
     font-family: 'Chewy', cursive;
     font-size: 30px;
 }
-.class
-{
-    margin-right: 60%;
-}
-.mdl-card
-{
-    text-align: center;
-}
 .mdl-textfield__input
 {
     font-family: 'Chewy', cursive;
     color: white;
-    font-size: 1.9em;
-    
+    font-size: 1.9em; 
 }
-.demo-list-icon {
+.demo-list-icon 
+{
   width: 300px;
 }
+/*Grundgerüst von der ScoreTabelle*/
 .tableScore
 {
     margin-top: 1em;
     background-color: #486e88;;
     border-radius: 15px;
 }
-input::-webkit-input-placeholder {
+/*Damit man die Farbe vom Inputfeld ändern kann*/
+input::-webkit-input-placeholder 
+{
 color: white !important;
 }
- 
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder 
+{ /* Firefox 18- */
 color: white !important;  
 }
- 
-input::-moz-placeholder {  /* Firefox 19+ */
+input::-moz-placeholder 
+{  /* Firefox 19+ */
 color: white !important;  
 }
- 
-input:-ms-input-placeholder {  
+input:-ms-input-placeholder 
+{  
 color: white !important;  
 }
+/*der Header*/
 header
 {
     margin-top: 1em;
     font-size: 250%;
 }
+/*Die Button easy normal und hard Einstellungen*/
 #easy, #normal, #hard
 {
     position: relative;
     margin-left: 0%;
     margin: 5px;
 }
-.pad
+.pad /*Die Inhalte von der Scoretabelle*/
 {
     color: white;
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-bottom: 2.7vw;
+    padding-top: 8px;
     border-radius: 4px;
+<<<<<<< HEAD
     font-size: 1.5em;
+=======
+    font-size: calc(10px + 2vw);
+>>>>>>> 0d89810b37ca164b4ee7d2bfd562c7e5f2e5c22d
 }
+/*Das table format*/
 table
 {
     width: 50%;
     margin: auto;
 }
-.left
+.left /*Der Titel vom Scorerboardcontainer*/
 {
     margin-bottom: 0.5em;
+    color: white;
 }
-.name
+.name /*Der Name der unten im Menü angezeigt wird*/
 {
     margin-top: 0.5em;
     color: white;
-    font-size: 2em;
+    font-size: calc(15px + 5vw);
 }
-.fullSize
+.fullSize /*Die Fläche auf die man drauf drücken muss*/
 {
     width: 90%;
     height: 70vh;
@@ -245,24 +189,21 @@ table
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#changeColor
+#changeColor /*Die Fläche auf die man drücken muss braucht eine eigene ID um sie anzusprechen*/
 {
     margin-top: 30px;
     background: #486e88;
 }
-#helpButton
+#helpButton /*Der Hilfe Button der bei den Schwierigkeitsgraden unten rechts angezeigt wird*/
 {
     background-color: darkblue;
     position: absolute;
     right: 2%;
     bottom: 2%;
+    border-radius: 100px;
 }
-#ClassicHelp, #MusicHelp
+#ClassicHelp, #MusicHelp /*Die Hilfe für Music und Help (Textanpassungen) */
 {
     color: white;
     font-size: 25px;
-}
-#helpButton
-{
-    border-radius: 100px;
 }

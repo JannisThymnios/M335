@@ -59,12 +59,8 @@ function ReadScore(){
     //Liest alle Scores und erstellt so das Scoreboard
     var Werte = []
     var ScoreRef = firebase.database().ref().child('Score');
-<<<<<<< HEAD
-    ScoreRef.on("child_added", snap => {
-=======
     ScoreRef.orderByChild('Score').limitToLast(10).on("child_added", snap => {
         //var Username = snap.child("Name").val();
->>>>>>> 0d89810b37ca164b4ee7d2bfd562c7e5f2e5c22d
         Werte.push(snap.val());
         Werte.sort(function(a, b) {
             return b.Score - a.Score;
