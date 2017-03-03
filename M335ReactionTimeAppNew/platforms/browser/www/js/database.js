@@ -17,7 +17,7 @@ function Login(){
     getUserToPage(Username);
 
     //SaveScore();
-    ReadScore();
+    //ReadScore();
 
     return firebase.database().ref().update(updates);
 }
@@ -34,11 +34,6 @@ function ReadUser(){
 function SaveScore(Mode, Difficulty, Score){
     //Erstellt Tabelle Score und fügt die Werte hinzu
     var scoreData = {
-
-        Name: "Muster",
-        Mode: "Classic",
-        Difficulty: "Einfach",
-        Score: "5000"
 
         Name: Username,
         Mode: Mode,
@@ -58,7 +53,7 @@ function SaveScore(Mode, Difficulty, Score){
 function ReadScore(){
     //Ruft die Werte von Score auf
     var Werte = []
-    var Test = [1, 100, 5, 2, 100]
+    
    
 
     var ScoreRef = firebase.database().ref().child('Score');
@@ -84,10 +79,11 @@ function ReadScore(){
         
         });
         var html = "";
-        for(var i = 1; i < Werte.length; i++){
+        for(var i = 0; i < Werte.length; i++){
             html += '<tr class="bor">';
-            html += '<td class="pad">' + i + '.</td>';
+            html += '<td class="pad">' + (i+1) + '.</td>';
             html += '<td class="pad">' +  Werte[i].Name + '</td>';
+            html += '<td class="pad">' +  Werte[i].Difficulty + '</td>';
             html += '<td class="pad">' +  Werte[i].Score + '</td>';
 
             html += '</tr>'

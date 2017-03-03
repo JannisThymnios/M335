@@ -17,7 +17,7 @@ function Login(){
     getUserToPage(Username);
 
     //SaveScore();
-    ReadScore();
+    //ReadScore();
 
     return firebase.database().ref().update(updates);
 }
@@ -79,10 +79,11 @@ function ReadScore(){
         
         });
         var html = "";
-        for(var i = 1; i < Werte.length; i++){
+        for(var i = 0; i < Werte.length; i++){
             html += '<tr class="bor">';
-            html += '<td class="pad">' + i + '.</td>';
+            html += '<td class="pad">' + (i+1) + '.</td>';
             html += '<td class="pad">' +  Werte[i].Name + '</td>';
+            html += '<td class="pad">' +  Werte[i].Difficulty + '</td>';
             html += '<td class="pad">' +  Werte[i].Score + '</td>';
 
             html += '</tr>'
