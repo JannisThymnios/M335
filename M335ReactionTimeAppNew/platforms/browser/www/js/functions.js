@@ -13,6 +13,7 @@ var RandomColor = "";
 var Startzeitpunkt = "";
 var EndZeitpunkt = "";
 var IsLoosing = "false";
+var alreadypressed = "false";
 //------------------------------------------------------------
 //------------------------------------------------------------
 //Erhöht die Punktzahl um 1 Punkt und setzt den MaxReactionTiming Wert Neu
@@ -96,25 +97,33 @@ function GoToStage() {
 //------------------------------------------------------------------------------------
 //HAUPTFUNKTION DES SPIELS , HIER WIRD DER NÄCHSTE LAUF ENTSCHIEDEN UND BERECHNET
 function checkTime() {
-    var date = new Date();
-    var min = date.getMinutes();
-    var sec = date.getSeconds();
-    var ms = date.getMilliseconds();
-    EndZeitpunkt = min.toString()+sec.toString()+ms.toString();
-    console.log(EndZeitpunkt);
-    if(Startzeitpunkt != "")
-    {
-        if(parseInt(EndZeitpunkt) - parseInt(Startzeitpunkt) <= currentMaxTiming) {
-            StagePassed();
+    if(alreadypressed != "true") {
+        var date = new Date();
+        var min = date.getMinutes();
+        var sec = date.getSeconds();
+        var ms = date.getMilliseconds();
+        EndZeitpunkt = min.toString()+sec.toString()+ms.toString();
+        console.log(EndZeitpunkt);
+        if(Startzeitpunkt != "")
+        {
+            if(parseInt(EndZeitpunkt) - parseInt(Startzeitpunkt) <= currentMaxTiming) {
+                StagePassed();
+            }
+            else {
+                IsLoosing = "true";
+            } 
         }
         else {
             IsLoosing = "true";
-        } 
+        }
+        alreadypressed = "true";
+        game();
     }
     else {
         IsLoosing = "true";
+        game(); 
     }
-    game();
+    
 }
 //------------------------------------------------------------------------------------
 function getUserToPage(UserName) {
@@ -146,6 +155,7 @@ function getRandomColor()
 //Backgroundcolor ändern
 function changeBackground()
 {
+    alreadypressed = "false";
     document.getElementById("changeColor").style.backgroundColor = RandomColor;
 }
 //------------------------------------------------------------------------------------

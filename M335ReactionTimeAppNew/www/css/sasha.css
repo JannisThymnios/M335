@@ -91,7 +91,7 @@ input /*inputfelder*/
 
 #getName /*Die Punkte die während dem Spiel angezeigt werden*/
 {
-    font-size: 2vh;
+    font-size: 5vh;
     color: white;
     width: 80%;
     text-align: center;
@@ -157,11 +157,7 @@ header
     padding-bottom: 2.7vw;
     padding-top: 8px;
     border-radius: 4px;
-<<<<<<< HEAD
-    font-size: 1.5em;
-=======
     font-size: calc(10px + 2vw);
->>>>>>> 0d89810b37ca164b4ee7d2bfd562c7e5f2e5c22d
 }
 /*Das table format*/
 table

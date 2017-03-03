@@ -11,6 +11,13 @@ function GoToMainMenue() {
     UnHideByID("menue");
 };
 //------------------------------------------------------------------------------------
+//Nötig, damit alle Werte zurückgesetzt werden wenn das SPiel abgebrochen wird.
+function GoBackToMainMenue() {
+    ResetValues();
+    HideAllContainer();
+    UnHideByID("menue");
+};
+//------------------------------------------------------------------------------------
 //Zeigt Klassischen Spielmodus
 function GoToClassicGameMode() {
     HideAllContainer();

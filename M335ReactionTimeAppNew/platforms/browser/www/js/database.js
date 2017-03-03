@@ -14,6 +14,9 @@ function Login(){
     if(Username == "") {
         alert("Name must be Filled in!");
     }
+    else if(Username.length > 15) {
+        alert("Name must be Between 1 and 15 Characters!");
+    }
     else {
         var userData = {
             Name: Username,
@@ -60,7 +63,6 @@ function ReadScore(){
     var Werte = []
     var ScoreRef = firebase.database().ref().child('Score');
     ScoreRef.orderByChild('Score').limitToLast(10).on("child_added", snap => {
-        //var Username = snap.child("Name").val();
         Werte.push(snap.val());
         Werte.sort(function(a, b) {
             return b.Score - a.Score;
