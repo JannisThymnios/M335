@@ -2,19 +2,11 @@
 {
     font-family: 'Chewy', cursive;
 }
-
-/*.firstPage 
-{
-    background-color: #8cbe5f;
-    text-align: center;
-}
-*/
 .card
 {
     margin-top: 3em;
     align: center;
     font-family: 'Chewy', cursive;
-
 }
 li
 {
@@ -43,7 +35,6 @@ li
 {
     background-color: #486e88;;
 }
-
 .bluecolorDiffEasy /*Zeile 47 - 62 sind fpr die Farben der Schwierigkeitsgrad Buttons und die Hover Farbe */ 
 {
     background-color: darkolivegreen;   
@@ -60,9 +51,9 @@ li
 {
     background-color: darkblue;
 }
-
 /*Zum verstecken der Container am Anfang */
-#menue, #difficulty, #tableScore, #classicGame, #musicGame, #help{
+#menue, #difficulty, #tableScore, #classicGame, #musicGame, #help
+{
     display: none;
 }
 /*Einstellung des Bestätigungsbuttons und Scorerboardbutton*/
@@ -113,19 +104,14 @@ input /*inputfelder*/
     font-family: 'Chewy', cursive;
     font-size: 30px;
 }
-/*.class
-{
-    margin-right: 60%;
-}*/
-/*mdl input überarbeiten*/
 .mdl-textfield__input
 {
     font-family: 'Chewy', cursive;
     color: white;
-    font-size: 1.9em;
-    
+    font-size: 1.9em; 
 }
-.demo-list-icon {
+.demo-list-icon 
+{
   width: 300px;
 }
 /*Grundgerüst von der ScoreTabelle*/
@@ -136,19 +122,20 @@ input /*inputfelder*/
     border-radius: 15px;
 }
 /*Damit man die Farbe vom Inputfeld ändern kann*/
-input::-webkit-input-placeholder {
+input::-webkit-input-placeholder 
+{
 color: white !important;
 }
- 
-input:-moz-placeholder { /* Firefox 18- */
+input:-moz-placeholder 
+{ /* Firefox 18- */
 color: white !important;  
 }
- 
-input::-moz-placeholder {  /* Firefox 19+ */
+input::-moz-placeholder 
+{  /* Firefox 19+ */
 color: white !important;  
 }
- 
-input:-ms-input-placeholder {  
+input:-ms-input-placeholder 
+{  
 color: white !important;  
 }
 /*der Header*/
@@ -169,13 +156,8 @@ header
     color: white;
     padding-bottom: 2.7vw;
     padding-top: 8px;
-    /*padding-top: 0.7em;
-    padding-bottom: 0.7em;
-    padding-left: 10%;
-    padding-right: 10%;*/
     border-radius: 4px;
     font-size: calc(10px + 2vw);
-    
 }
 /*Das table format*/
 table
