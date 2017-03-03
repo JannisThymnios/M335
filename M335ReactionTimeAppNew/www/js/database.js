@@ -4,22 +4,28 @@ var Username = "";
 function Login(){
     //Erstellt Tabelle User und fügt die Werte hinzu
     Username = document.getElementById("nameUser").value;
-    var userData = {
-        Name: Username,
-        Foto: "-"
-    };
+    console.log(Username);
+    if(Username == "") {
+        alert("Name must be Filled in!");
+    }
+    else {
+        var userData = {
+            Name: Username,
+            Foto: "-"
+        };
 
-    newUserKey = firebase.database().ref().child('User').push().key;
-    
-    var updates = {};
-    updates['/User/' + newUserKey] = userData;
-    GoToMainMenue();
-    getUserToPage(Username);
+        newUserKey = firebase.database().ref().child('User').push().key;
+        
+        var updates = {};
+        updates['/User/' + newUserKey] = userData;
+        GoToMainMenue();
+        getUserToPage(Username);
 
-    //SaveScore();
-    //ReadScore();
+        //SaveScore();
+        //ReadScore();
 
-    return firebase.database().ref().update(updates);
+        return firebase.database().ref().update(updates);
+    }
 }
 function ReadUser(){
     //Ruft die Werte von der Tabelle User auf
