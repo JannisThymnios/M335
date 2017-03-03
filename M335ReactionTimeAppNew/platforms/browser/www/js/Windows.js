@@ -28,6 +28,7 @@ function GoToMusicGameMode() {
 function GoToScoreboard() {
     HideAllContainer();
     UnHideByID("tableScore");
+    ReadScore();
 };
 //------------------------------------------------------------------------------------
 //Zeigt Hilfe
