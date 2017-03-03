@@ -6,13 +6,19 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
-    <!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />-->
+    <!--Firebase.js einbinden-->
     <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+    <!--Font von Google-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--CSS File-->
     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!--Font von Google-->
     <link href="https://fonts.googleapis.com/css?family=Chewy" rel="stylesheet">
+    <!--Stylesheet-->
     <link rel="stylesheet" type="text/css" href="css/sasha.css" />
+    <!--Material Design-->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <!--Die Connection zur Firebase Datenbank-->
     <script>
         var config = {
             apiKey: "AIzaSyA95jk27_EPfucXOyyYAUWOynbZhSjQY0Q",
@@ -26,8 +32,10 @@
     <title>Reaction Time</title>
 </head>
 <body>
+
     <container id="logIn">
         <form action="#" id="formular" class="form">
+                <!--Gif auf der Startseite-->        
                 <img src="./img/dots.gif" />
                 <li>
                     <label for="name"><input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." /></label>
@@ -39,7 +47,7 @@
     </container>
     <container id="menue">
         <div>
-            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="GoToScoreboard()">Scorerboard</button>
+            <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="GoToScoreboard()">Scoreboard</button>
             <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="ExitApp()">Exit </button>
         </div>
         <div class="card">
@@ -79,35 +87,11 @@
                   <tr>
                     <th class="pad">Platz</th>
                     <th class="pad">Name</th>
+                    <th class="pad">Difficulty</th>
                     <th class="pad">Score</th>
                     </tr>
                 </thead>
                 <tbody id="table_body">
-                     <!-- <tr class="bor">
-                    <td class="pad">1.</td>
-                    <td class="pad">Name</td>
-                    <td class="pad">Score</td>
-                    </tr>
-                    <tr class="bor">
-                    <td class="pad">2.</td>
-                    <td class="pad">Name</td>
-                    <td class="pad">Score</td>
-                    </tr>
-                    <tr class="bor">
-                    <td class="pad">3.</td>
-                    <td class="pad">Name</td>
-                    <td class="pad">Score</td>
-                    </tr class="bor">
-                    <tr>
-                    <td class="pad">4.</td>
-                    <td class="pad">Name</td>
-                    <td class="pad">Score</td>
-                    </tr>
-                    <tr class="bor">
-                    <td class="pad">5.</td>
-                    <td class="pad">Name</td>
-                    <td class="pad">Score</td>
-                    </tr>-->
                 </tbody>
             </table>
         </div>
@@ -116,8 +100,6 @@
         <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
-        
-        <!--<p id="getReady">Get Ready...</p>-->
         <button class="fullSize mdl-button mdl-js-button mdl-button--raised schrift" id="changeColor" onclick="checkTime()"></button>
         <p id="getName">Punkte: 0</p>
     </container>
@@ -133,15 +115,21 @@
         <p id="MusicHelp">Not Working</p>
         <p id="ClassicHelp">Drücke auf die Fläche sobald sich die Farbe geändert hat. Je nach Schwierigkeit, musst du schneller reagieren. Wenn du es innerhalb der Zeit geschafft hast, bekommst du einen Punkt, dafür musst du das nächste mal, noch schneller auf die Fläche drücken.<br><br>Viel Spass!</p>
     </container>
+    <!--Cordova-->
     <script type="text/javascript" src="cordova.js"></script>
+    <!--Index Javascript-->
     <script type="text/javascript" src="js/index.js"></script>
+    <!--Javascript für Datenbank-->
     <script type="text/javascript" src="js/database.js"></script>
+    <!--Javascript für Spiellogik-->
     <script type="text/javascript" src="js/functions.js"></script>
+    <!--Nicht mehr verwendet-->
     <script type="text/javascript" src="js/timer.js"></script>
+    <!--Javascript zum anzeigen und verstecken-->
     <script type="text/javascript" src="js/HtmlChange.js"></script>
+    <!--Javascript zum wechseln zwischen den Seiten-->
     <script type="text/javascript" src="js/Windows.js"></script>
-    <script type="text/javascript">
-        //app.initialize();
-    </script>
+    <!--Input überprüfen-->
+    <script type="text/javascript" src="js/checkInput.js"></script>
 </body>
 </html>
