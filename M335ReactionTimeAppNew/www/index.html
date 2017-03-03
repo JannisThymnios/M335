@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html id="all">
-
 <head>
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
@@ -32,7 +31,7 @@
     <title>Reaction Time</title>
 </head>
 <body>
-
+    <!--Der Container für die LoginSeite-->
     <container id="logIn">
         <form action="#" id="formular" class="form">
                 <!--Gif auf der Startseite-->        
@@ -45,6 +44,7 @@
                 </li>
         </form>
     </container>
+    <!--Der Container für das Hauptmenü-->
     <container id="menue">
         <div>
             <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="GoToScoreboard()">Scoreboard</button>
@@ -60,6 +60,7 @@
             <p class="name" id="UserNameOnRightLeftDownZeroPercentTopDownUnderUnderUserNameRightToPicture"></p>
         </div>
     </container>
+    <!--Container für die Auswahl der Schwierigkeit-->
     <container id="difficulty">
         <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
@@ -77,6 +78,7 @@
         </div>
          <button id="helpButton" class="mdl-button mdl-js-button mdl-button--raised schrift" onclick="GoToHelp()">?</button>
     </container>
+    <!--Container für das Scoreboard-->
     <container id="tableScore">
         <header class="left">Scoreboard</header><button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
@@ -96,6 +98,7 @@
             </table>
         </div>
     </container>
+    <!--Container für Classic Game (Funktioniert)-->
     <container id="classicGame">
         <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
@@ -103,11 +106,13 @@
         <button class="fullSize mdl-button mdl-js-button mdl-button--raised schrift" id="changeColor" onclick="checkTime()"></button>
         <p id="getName">Punkte: 0</p>
     </container>
+    <!--Container für Music Game (Nicht Funktionsfähig)-->
     <container id="musicGame">
         <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
         </button>
     </container>
+    <!--Container für HilfeSeite-->
     <container id="help">
         <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
             Exit
