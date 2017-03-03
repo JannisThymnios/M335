@@ -22,12 +22,15 @@ function Login(){
             Name: Username,
             Foto: "-"
         };
+        
         newUserKey = firebase.database().ref().child('User').push().key;
+        
         var updates = {};
+        
         updates['/User/' + newUserKey] = userData;
         GoToMainMenue();
         getUserToPage(Username);
-
+       
         return firebase.database().ref().update(updates);
     }
 }
