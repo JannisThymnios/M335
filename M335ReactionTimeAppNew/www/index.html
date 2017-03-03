@@ -34,14 +34,14 @@
     <!--Der Container für die LoginSeite-->
     <container id="logIn">
         <form action="#" id="formular" class="form">
-                <!--Gif auf der Startseite-->        
-                <img src="./img/dots.gif" />
-                <li>
-                    <label for="name"><input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." /></label>
-                </li>
-                <li id="listUser">
-                    <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="Login()">Bestätigen </button>
-                </li>
+            <!--Gif auf der Startseite-->        
+            <img src="./img/dots.gif" />
+            <li>
+                <label for="name"><input id="nameUser" class="mdl-textfield__input" type="text" id="sample1" type="text" placeholder="Name..." /></label>
+            </li>
+            <li id="listUser">
+                <button class="NoHover mdl-button mdl-js-button mdl-button--raised schrift" id="scorerboard" onclick="Login()">Bestätigen </button>
+            </li>
         </form>
     </container>
     <!--Der Container für das Hauptmenü-->
@@ -62,68 +62,54 @@
     </container>
     <!--Container für die Auswahl der Schwierigkeit-->
     <container id="difficulty">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
-            Exit
-        </button>
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">Exit</button>
         <div id="vertical">
-            <button class="bluecolorDiffEasy mdl-button mdl-js-button mdl-button--raised schrift" id="easy" value="1" onclick="SetDifficulty(1)">
-            Easy
-            </button>
-            <button class="bluecolorDiffNormal mdl-button mdl-js-button mdl-button--raised schrift" id="normal" value="2" onclick="SetDifficulty(2)">
-            Normal
-            </button>
-            <button class="bluecolorDiffHard mdl-button mdl-js-button mdl-button--raised schrift" id="hard" value="3" onclick="SetDifficulty(3)">
-            Hard
-            </button>
+            <button class="bluecolorDiffEasy mdl-button mdl-js-button mdl-button--raised schrift" id="easy" value="1" onclick="SetDifficulty(1)">Easy</button>
+            <button class="bluecolorDiffNormal mdl-button mdl-js-button mdl-button--raised schrift" id="normal" value="2" onclick="SetDifficulty(2)">Normal</button>
+            <button class="bluecolorDiffHard mdl-button mdl-js-button mdl-button--raised schrift" id="hard" value="3" onclick="SetDifficulty(3)">Hard</button>
         </div>
-         <button id="helpButton" class="mdl-button mdl-js-button mdl-button--raised schrift" onclick="GoToHelp()">?</button>
+        <button id="helpButton" class="mdl-button mdl-js-button mdl-button--raised schrift" onclick="GoToHelp()">?</button>
     </container>
     <!--Container für das Scoreboard-->
     <container id="tableScore">
-        <header class="left">Scoreboard</header><button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
-            Exit
-        </button>
+        <header class="left">Scoreboard</header>
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">Exit</button>
         <div class="vert">
             <table class="tableScore">
                 <thead>
-                  <tr>
-                    <th class="pad">Platz</th>
-                    <th class="pad">Name</th>
-                    <th class="pad">Difficulty</th>
-                    <th class="pad">Score</th>
+                    <tr>
+                        <th class="pad">Platz</th>
+                        <th class="pad">Name</th>
+                        <th class="pad">Difficulty</th>
+                        <th class="pad">Score</th>
                     </tr>
                 </thead>
                 <tbody id="table_body">
+                    <!--Hier wird der Table vom Score eingefüllt-->
                 </tbody>
             </table>
         </div>
     </container>
     <!--Container für Classic Game (Funktioniert)-->
     <container id="classicGame">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
-            Exit
-        </button>
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">Exit</button>
         <button class="fullSize mdl-button mdl-js-button mdl-button--raised schrift" id="changeColor" onclick="checkTime()"></button>
         <p id="getName">Punkte: 0</p>
     </container>
     <!--Container für Music Game (Nicht Funktionsfähig)-->
     <container id="musicGame">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
-            Exit
-        </button>
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">Exit</button>
     </container>
     <!--Container für HilfeSeite-->
     <container id="help">
-        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">
-            Exit
-        </button>
+        <button class="bluecolor mdl-button mdl-js-button mdl-button--raised schrift" id="exit" onclick="GoToMainMenue()">Exit</button>
         <p id="MusicHelp">Not Working</p>
-        <p id="ClassicHelp">Drücke auf die Fläche sobald sich die Farbe geändert hat. Je nach Schwierigkeit, musst du schneller reagieren. Wenn du es innerhalb der Zeit geschafft hast, bekommst du einen Punkt, dafür musst du das nächste mal, noch schneller auf die Fläche drücken.<br><br>Viel Spass!</p>
+        <p id="ClassicHelp">Drücke auf die Fläche sobald sich die Farbe geändert hat. Je nach Schwierigkeit, 
+            musst du schneller reagieren. Wenn du es innerhalb der Zeit geschafft hast, bekommst du einen Punkt, 
+            dafür musst du das nächste mal, noch schneller auf die Fläche drücken.<br><br>Viel Spass!</p>
     </container>
     <!--Cordova-->
     <script type="text/javascript" src="cordova.js"></script>
-    <!--Index Javascript-->
-    <script type="text/javascript" src="js/index.js"></script>
     <!--Javascript für Datenbank-->
     <script type="text/javascript" src="js/database.js"></script>
     <!--Javascript für Spiellogik-->

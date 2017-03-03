@@ -35,6 +35,7 @@ function GoToScoreboard() {
 function GoToHelp() {
     HideAllContainer();
     UnHideByID("help");
+    //Wechselt aufgrund des Spielmodus die Help Seite (Musichelp wird nie angezeigt da der Modus deaktiviert ist)
     if(GameMode == "Classic")
     {
         HideByID("MusicHelp");
@@ -54,7 +55,7 @@ function GoToDifficulty(Value) {
     UnHideByID("difficulty");  
 };
 //------------------------------------------------------------------------------------
-//Um den Start zu verzögern
+//Methode für Verzögern, Wartet Millisekunden aufgrund des Parameters
 function wait(ms)
 {
     var start = new Date().getTime();

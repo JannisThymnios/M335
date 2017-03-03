@@ -1,4 +1,3 @@
-
 // VARIABELN FÜR SCORE
 //------------------------------------------------------------
 var StartScore = 0; //Score am Anfang des spiels
@@ -18,14 +17,12 @@ var IsLoosing = "false";
 //------------------------------------------------------------
 //Erhöht die Punktzahl um 1 Punkt und setzt den MaxReactionTiming Wert Neu
 function StagePassed() {
-    if(currentMaxTiming > 10)
-    {
+    if(currentMaxTiming > 10) {
         currentPunktezahl = currentPunktezahl + PunkteProStage;
         currentMaxTiming = currentMaxTiming - TimingIntervall;        
         getScore();
     }
-    else
-    {
+    else {
         SaveScore(GameMode, Difficulty, currentPunktezahl);
         ResetValues();
         GoToScoreboard();
@@ -60,11 +57,6 @@ function SetDifficulty(Value) {
     GoToStage();
 };
 //------------------------------------------------------------------------------------
-//Zeigt wieder die Hauptmenü Seite, und Resetet alle Werte
-function BackToMainMenu() {
-//Hide alle nicht Menue ID Elemente                                                             TODO
-};
-//------------------------------------------------------------------------------------
 //Setzt alle Werte fürs Spiel
 function SetGameSessionValues() {
     GameMode = GameMode;        //Temporär zur Übersicht
@@ -97,12 +89,9 @@ function GoToStage() {
     if(currentPunktezahl == 0) { //Dann ist es die erste Runde also müssen Werte gesetzt werden
         SetGameSessionValues();
         GoToClassicGameMode();
-       
     } else {
         GoToClassicGameMode();
-       
     }
-     
 };
 //------------------------------------------------------------------------------------
 //HAUPTFUNKTION DES SPIELS , HIER WIRD DER NÄCHSTE LAUF ENTSCHIEDEN UND BERECHNET
@@ -112,19 +101,17 @@ function checkTime() {
     var sec = date.getSeconds();
     var ms = date.getMilliseconds();
     EndZeitpunkt = min.toString()+sec.toString()+ms.toString();
+    console.log(EndZeitpunkt);
     if(Startzeitpunkt != "")
     {
-        if(parseInt(EndZeitpunkt) - parseInt(Startzeitpunkt) <= currentMaxTiming)
-        {
+        if(parseInt(EndZeitpunkt) - parseInt(Startzeitpunkt) <= currentMaxTiming) {
             StagePassed();
         }
-        else
-        {
+        else {
             IsLoosing = "true";
         } 
     }
-    else
-    {
+    else {
         IsLoosing = "true";
     }
     game();
