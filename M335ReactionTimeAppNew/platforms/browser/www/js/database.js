@@ -63,7 +63,7 @@ function ReadScore(){
    
 
     var ScoreRef = firebase.database().ref().child('Score');
-    ScoreRef.on("child_added", snap => {
+    ScoreRef.orderByChild('Score').limitToLast(10).on("child_added", snap => {
         //var Username = snap.child("Name").val();
         Werte.push(snap.val());
         
